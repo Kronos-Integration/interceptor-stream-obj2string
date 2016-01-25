@@ -1,0 +1,2 @@
+== Object to String
+This module transforms an object stream into a stream of strings
