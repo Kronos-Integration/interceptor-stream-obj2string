@@ -80,8 +80,8 @@ describe('Interceptor test', function () {
 
     writer.on('finish', function (val) {
       assert.equal(writer.objectStack.length, 2);
-      assert.equal(writer.objectStack[0], '{"name":"Matt","line_number":3}');
-      assert.equal(writer.objectStack[1], '{"last_name":"Herbert"}');
+      assert.equal(writer.objectStack[0], '{"name":"Matt","line_number":3}\n');
+      assert.equal(writer.objectStack[1], '{"last_name":"Herbert"}\n');
       done();
     });
 
