@@ -61,7 +61,6 @@ describe('Interceptor test', function () {
       "name": "gumboIn"
     };
 
-
     // create a dummy payload and add two objects
     const dummyStream = mockReadStreamFactory();
     dummyStream.add({
