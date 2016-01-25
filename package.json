@@ -1,5 +1,5 @@
 {
-  "name": "kronos-interceptor-line-parser",
+  "name": "kronos-interceptor-stream-obj2string",
   "version": "0.0.0",
   "description": "Splits a stream into lines.",
   "main": "index.js",
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kronos-Integration/kronos-interceptor-line-parser.git"
+    "url": "git+https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string.git"
   },
   "bugs": {
-    "url": "https://github.com/Kronos-Integration/kronos-interceptor-line-parser/issues"
+    "url": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string/issues"
   },
-  "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-line-parser#readme",
+  "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string#readme",
   "release": {
     "debug": false
   },
