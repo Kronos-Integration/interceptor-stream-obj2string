@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string#readme",
   "dependencies": {
-    "kronos-interceptor": "^2.0.0"
+    "kronos-interceptor": "^2.0.1"
   },
   "devDependencies": {
     "chai": "3.5.0",
@@ -28,16 +28,13 @@
     "mocha": "2.4.5",
     "semantic-release": "6.2.0"
   },
-  "contributors": [
-    {
-      "name": "Torsten Link",
-      "email": "torstenlink@gmx.de"
-    },
-    {
-      "name": "Markus Felten",
-      "email": "markus.felten@gmx.de"
-    }
-  ],
+  "contributors": [{
+    "name": "Torsten Link",
+    "email": "torstenlink@gmx.de"
+  }, {
+    "name": "Markus Felten",
+    "email": "markus.felten@gmx.de"
+  }],
   "license": "BSD-2-Clause",
   "engines": {
     "node": ">=5"
