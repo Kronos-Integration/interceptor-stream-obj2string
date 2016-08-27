@@ -1,7 +1,7 @@
 /* global describe, it, xit */
 /* jslint node: true, esnext: true */
 
-"use strict";
+'use strict';
 
 /*
  * Just test if the message will be passed through the interceptor
@@ -30,15 +30,15 @@ class MockWriteStream extends stream.Writable {
 
   _write(chunk, encoding, callback) {
     this.objectStack.push(chunk);
-    console.log(chunk);
+    //console.log(chunk);
     callback();
   }
 }
 
 
 const stepMock = {
-  "name": "dummy step name",
-  "type": "dummy step type"
+  name: 'dummy step name',
+  type: 'dummy step type'
 };
 
 const checkProperties = {};
@@ -48,8 +48,8 @@ describe('Interceptor test', function () {
 
   it('Create', function () {
     const endpoint = {
-      "owner": stepMock,
-      "name": "gumboIn"
+      owner: stepMock,
+      name: 'gumboIn'
     };
     const messageHandler = new InterceptorUnderTest(checkProperties, endpoint);
     assert.ok(messageHandler);
@@ -57,23 +57,23 @@ describe('Interceptor test', function () {
 
   it('Send message', function (done) {
     const endpoint = {
-      "owner": stepMock,
-      "name": "gumboIn"
+      owner: stepMock,
+      name: 'gumboIn'
     };
 
     // create a dummy payload and add two objects
     const dummyStream = mockReadStreamFactory();
     dummyStream.add({
-      "name": "Matt",
-      "line_number": 3
+      name: 'Matt',
+      line_number: 3
     });
     dummyStream.add({
-      "last_name": "Herbert"
+      last_name: 'Herbert'
     });
 
     const sendMessage = {
-      "info": "first message",
-      "payload": dummyStream
+      info: 'first message',
+      payload: dummyStream
     };
 
     const writer = new MockWriteStream();
@@ -96,7 +96,5 @@ describe('Interceptor test', function () {
     messageHandler.receive(sendMessage);
 
   });
-
-
 
 });
