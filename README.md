@@ -19,12 +19,14 @@ kronos-interceptor-stream-obj2string
 Splits a stream into lines.
 
 # API Reference
-{{#modules~}}
-- {{name}}
-{{/modules}}
 
-{{#functions}}* {{>docs}}
-{{/functions}}
+* <a name="Obj2String+_transform"></a>
+
+## obj2String._transform()
+Reads the stream data and split it into lines.
+
+**Kind**: instance method of <code>[Obj2String](#Obj2String)</code>  
+
 * * *
 
 install

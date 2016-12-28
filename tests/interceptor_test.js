@@ -12,7 +12,7 @@ const chai = require('chai'),
   assert = chai.assert,
   expect = chai.expect,
   should = chai.should(),
-  InterceptorUnderTest = require('../index').Interceptor,
+  InterceptorUnderTest = require('../dist/module').Stream2ObjectInterceptor,
   MockReceiveInterceptor = require('kronos-test-interceptor').MockReceiveInterceptor,
   mockReadStreamFactory = require('kronos-test-interceptor').mockReadStreamFactory;
 

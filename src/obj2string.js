@@ -44,6 +44,11 @@ class Obj2String extends stream.Transform {
 		} // end transform
 }
 
-module.exports = function (opts) {
+function Obj2StringFactory(opts) {
 	return new Obj2String(opts);
+}
+
+
+export {
+	Obj2StringFactory
 };

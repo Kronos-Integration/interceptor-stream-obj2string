@@ -2,13 +2,13 @@
   "name": "kronos-interceptor-stream-obj2string",
   "version": "0.0.0-semantic-release",
   "description": "Splits a stream into lines.",
-  "main": "index.js",
+  "main": "dist/module.js",
+  "module": "src/module.js",
   "scripts": {
     "cover": "npm run build && node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -u exports tests/*_test.js",
-    "doc": "./node_modules/.bin/jsdoc lib/*.js",
     "test": "npm run build && node_modules/.bin/mocha tests/*_test.js && markdown-doctest",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "build": "node_modules/rollup/bin/rollup --output=index.js -c -- {{module}}",
+    "build": "node_modules/rollup/bin/rollup --output=dist/module.js -c -- src/module.js",
     "docs": "jsdoc2md -l off -t doc/README.hbs -f src/*.js > README.md"
   },
   "repository": {
@@ -20,13 +20,12 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string#readme",
   "dependencies": {
-    "kronos-interceptor": "^2.4.0"
+    "kronos-interceptor": "^2.4.6"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "cz-conventional-changelog": "^1.2.0",
     "istanbul": "^0.4.5",
-    "jsdoc": "3.4.3",
     "kronos-test-interceptor": "^2.0.5",
     "mocha": "^3.2.0",
     "semantic-release": "^6.3.5",
