@@ -20,18 +20,18 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string#readme",
   "dependencies": {
-    "kronos-interceptor": "^2.4.7"
+    "kronos-interceptor": "^2.4.9"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "cz-conventional-changelog": "^1.2.0",
     "istanbul": "^0.4.5",
-    "kronos-test-interceptor": "^2.0.5",
-    "mocha": "^3.2.0",
-    "semantic-release": "^6.3.5",
     "jsdoc-to-markdown": "^2.0.1",
+    "kronos-test-interceptor": "^2.1.0",
     "markdown-doctest": "^0.9.1",
-    "rollup": "^0.39.2"
+    "mocha": "^3.2.0",
+    "rollup": "^0.39.2",
+    "semantic-release": "^6.3.5"
   },
   "contributors": [
     {
