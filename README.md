@@ -1,5 +1,5 @@
 [![npm](https://img.shields.io/npm/v/kronos-interceptor-stream-obj2string.svg)](https://www.npmjs.com/package/kronos-interceptor-stream-obj2string)
-[![Greenkeeper](https://badges.greenkeeper.io/Kronos-Integration/kronos-interceptor-stream-obj2string)](https://greenkeeper.io/)
+[![Greenkeeper](https://badges.greenkeeper.io/Kronos-Integration/kronos-interceptor-stream-obj2string.svg)](https://greenkeeper.io/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string)
 [![Build Status](https://secure.travis-ci.org/Kronos-Integration/kronos-interceptor-stream-obj2string.png)](http://travis-ci.org/Kronos-Integration/kronos-interceptor-stream-obj2string)
 [![bithound](https://www.bithound.io/github/Kronos-Integration/kronos-interceptor-stream-obj2string/badges/score.svg)](https://www.bithound.io/github/Kronos-Integration/kronos-interceptor-stream-obj2string)
@@ -26,7 +26,7 @@ Splits a stream into lines.
 ## obj2String._transform()
 Reads the stream data and split it into lines.
 
-**Kind**: instance method of <code>[Obj2String](#Obj2String)</code>  
+**Kind**: instance method of [<code>Obj2String</code>](#Obj2String)  
 
 * * *
 
