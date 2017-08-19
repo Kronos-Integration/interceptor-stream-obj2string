@@ -31,8 +31,8 @@
     "kronos-test-interceptor": "^2.1.0",
     "markdown-doctest": "^0.9.1",
     "mocha": "^3.5.0",
-    "rollup": "^0.47.4",
-    "semantic-release": "^7.0.1",
+    "rollup": "^0.47.6",
+    "semantic-release": "^7.0.2",
     "nyc": "^11.1.0"
   },
   "contributors": [
@@ -47,7 +47,7 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=8.3.0"
+    "node": ">=8.4.0"
   },
   "keywords": [
     "stream",
