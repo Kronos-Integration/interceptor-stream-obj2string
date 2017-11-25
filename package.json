@@ -31,8 +31,8 @@
     "kronos-test-interceptor": "^2.1.0",
     "markdown-doctest": "^0.9.1",
     "mocha": "^4.0.1",
-    "rollup": "^0.51.7",
-    "semantic-release": "^9.1.1",
+    "rollup": "^0.51.8",
+    "semantic-release": "^10.0.1",
     "nyc": "^11.3.0"
   },
   "contributors": [
