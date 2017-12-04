@@ -1,21 +1,33 @@
-/* global describe, it, xit */
-/* jslint node: true, esnext: true */
+import { Stream2ObjectInterceptor } from '../src/stream2object-interceptor';
+import {
+  interceptorTest,
+  mockReadStreamFactory,
+  testResponseHandler
+} from 'kronos-test-interceptor';
+import test from 'ava';
 
-'use strict';
+const stream = require('stream');
 
-/*
- * Just test if the message will be passed through the interceptor
- */
+const logger = {
+  debug(a) {
+    console.log(a);
+  }
+};
 
-const chai = require('chai'),
-  stream = require('stream'),
-  assert = chai.assert,
-  expect = chai.expect,
-  should = chai.should(),
-  InterceptorUnderTest = require('../dist/module').Stream2ObjectInterceptor,
-  MockReceiveInterceptor = require('kronos-test-interceptor').MockReceiveInterceptor,
-  mockReadStreamFactory = require('kronos-test-interceptor').mockReadStreamFactory;
-
+function dummyEndpoint(name) {
+  return {
+    get name() {
+      return name;
+    },
+    get path() {
+      return '/get:id';
+    },
+    toString() {
+      return this.name;
+    },
+    step: logger
+  };
+}
 
 class MockWriteStream extends stream.Writable {
   constructor() {
@@ -30,38 +42,28 @@ class MockWriteStream extends stream.Writable {
 
   _write(chunk, encoding, callback) {
     this.objectStack.push(chunk);
-    //console.log(chunk);
     callback();
   }
 }
 
+test(
+  'basic',
+  interceptorTest,
+  Stream2ObjectInterceptor,
+  dummyEndpoint('ep1'),
+  {},
+  'stream-obj-to-string',
+  async (t, interceptor, withConfig) => {
+    t.deepEqual(interceptor.toJSON(), {
+      type: 'stream-obj-to-string'
+    });
 
-const stepMock = {
-  name: 'dummy step name',
-  type: 'dummy step type'
-};
+    if (!withConfig) return;
 
-const checkProperties = {};
+    interceptor.connected = dummyEndpoint('ep');
+    interceptor.connected.receive = testResponseHandler;
 
-
-describe('Interceptor test', function () {
-
-  it('Create', function () {
-    const endpoint = {
-      owner: stepMock,
-      name: 'gumboIn'
-    };
-    const messageHandler = new InterceptorUnderTest(checkProperties, endpoint);
-    assert.ok(messageHandler);
-  });
-
-  it('Send message', function (done) {
-    const endpoint = {
-      owner: stepMock,
-      name: 'gumboIn'
-    };
-
-    // create a dummy payload and add two objects
+    /*
     const dummyStream = mockReadStreamFactory();
     dummyStream.add({
       name: 'Matt',
@@ -78,15 +80,17 @@ describe('Interceptor test', function () {
 
     const writer = new MockWriteStream();
 
-    writer.on('finish', function (val) {
-      assert.equal(writer.objectStack.length, 2);
-      assert.equal(writer.objectStack[0], '{"name":"Matt","line_number":3}\n');
-      assert.equal(writer.objectStack[1], '{"last_name":"Herbert"}\n');
+    writer.on('finish', val => {
+      t.is(writer.objectStack.length, 2);
+      t.is(writer.objectStack[0], '{"name":"Matt","line_number":3}\n');
+      t.is(writer.objectStack[1], '{"last_name":"Herbert"}\n');
       done();
     });
 
-    const messageHandler = new InterceptorUnderTest(checkProperties, endpoint);
-    const mockReceive = new MockReceiveInterceptor(function (request, oldRequest) {
+    const mockReceive = new MockReceiveInterceptor(function(
+      request,
+      oldRequest
+    ) {
       assert.ok(request);
 
       request.payload.pipe(writer);
@@ -94,7 +98,6 @@ describe('Interceptor test', function () {
 
     messageHandler.connected = mockReceive;
     messageHandler.receive(sendMessage);
-
-  });
-
-});
+    */
+  }
+);
