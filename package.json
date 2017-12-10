@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string#readme",
   "dependencies": {
-    "kronos-interceptor": "^2.4.10"
+    "kronos-interceptor": "^2.5.2"
   },
   "devDependencies": {
     "ava": "^0.24.0",
