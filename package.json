@@ -1,9 +1,26 @@
 {
   "name": "kronos-interceptor-stream-obj2string",
   "version": "0.0.0-semantic-release",
-  "description": "Splits a stream into lines.",
   "main": "dist/stream2object-interceptor.js",
   "module": "src/stream2object-interceptor.js",
+  "description": "Splits a stream into lines.",
+  "keywords": [
+    "stream",
+    "line",
+    "parser",
+    "kronos-interceptor"
+  ],
+  "contributors": [
+    {
+      "name": "Torsten Link",
+      "email": "torstenlink@gmx.de"
+    },
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
+  "license": "BSD-2-Clause",
   "scripts": {
     "cover": "nyc --temp-directory build/nyc ava",
     "test": "ava",
@@ -15,14 +32,6 @@
     "prepare": "rollup -c",
     "lint": "documentation lint src/stream2object-interceptor.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string/issues"
-  },
-  "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string#readme",
   "dependencies": {
     "kronos-interceptor": "^2.5.2"
   },
@@ -37,34 +46,17 @@
     "xo": "^0.19.0",
     "documentation": "^5.3.5"
   },
-  "contributors": [
-    {
-      "name": "Torsten Link",
-      "email": "torstenlink@gmx.de"
-    },
-    {
-      "name": "Markus Felten",
-      "email": "markus.felten@gmx.de"
-    }
-  ],
-  "license": "BSD-2-Clause",
   "engines": {
     "node": ">=8.9.3"
   },
-  "keywords": [
-    "stream",
-    "line",
-    "parser",
-    "kronos-interceptor"
-  ],
-  "template": {
-    "repository": {
-      "url": "https://github.com/arlac77/npm-package-template.git"
-    }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string.git"
   },
-  "xo": {
-    "space": true
+  "bugs": {
+    "url": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string/issues"
   },
+  "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string#readme",
   "ava": {
     "files": [
       "build/*-test.js"
@@ -84,5 +76,13 @@
       "lcov"
     ],
     "report-dir": "./build/coverage"
+  },
+  "xo": {
+    "space": true
+  },
+  "template": {
+    "repository": {
+      "url": "https://github.com/arlac77/npm-package-template.git"
+    }
   }
 }
