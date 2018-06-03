@@ -1,6 +1,9 @@
 {
   "name": "kronos-interceptor-stream-obj2string",
   "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/stream2object-interceptor.js",
   "module": "src/stream2object-interceptor.js",
   "description": "Splits a stream into lines.",
