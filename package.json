@@ -37,7 +37,7 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "dependencies": {
-    "kronos-interceptor": "^2.5.2"
+    "kronos-interceptor": "^2.6.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
