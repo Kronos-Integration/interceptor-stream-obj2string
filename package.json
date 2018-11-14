@@ -66,7 +66,8 @@
   "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string#readme",
   "ava": {
     "files": [
-      "tests/*-test.js"
+      "tests/*-test.js",
+      "tests/*-test.mjs"
     ],
     "presets": [
       "env"
