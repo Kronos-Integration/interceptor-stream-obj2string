@@ -8,16 +8,9 @@
   "module": "src/stream2object-interceptor.js",
   "description": "Splits a stream into lines.",
   "keywords": [
-    "stream",
-    "line",
-    "parser",
     "kronos-interceptor"
   ],
   "contributors": [
-    {
-      "name": "Torsten Link",
-      "email": "torstenlink@gmx.de"
-    },
     {
       "name": "Markus Felten",
       "email": "markus.felten@gmx.de"
@@ -32,16 +25,13 @@
     "prepare": "rollup -c",
     "test": "ava"
   },
-  "dependencies": {
-    "kronos-interceptor": "^2.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "ava": "^2.4.0",
     "builtin-modules": "^3.1.0",
     "c8": "^6.0.0",
     "documentation": "^12.1.2",
     "esm": "^3.2.25",
-    "kronos-test-interceptor": "^3.1.1",
     "markdown-doctest": "^1.0.0",
     "rollup": "^1.25.2",
     "rollup-plugin-cleanup": "^3.1.1",
@@ -63,16 +53,16 @@
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-interceptor-stream-obj2string#readme",
   "ava": {
-    "files": [
-      "tests/*-test.mjs"
-    ],
     "require": [
       "esm"
     ],
-    "babel": false,
-    "compileEnhancements": false,
     "extensions": [
       "mjs"
+    ],
+    "babel": false,
+    "compileEnhancements": false,
+    "files": [
+      "tests/*-test.mjs"
     ]
   },
   "template": {
