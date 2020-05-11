@@ -2,7 +2,7 @@
  * Transforms an object stream into a stream of strings
  */
 
-const { Transform } = require('stream');
+import { Transform } from 'stream';
 
 export class Obj2String extends Transform {
   /**
