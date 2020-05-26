@@ -8,8 +8,7 @@
   "type": "module",
   "main": "./src/stream2object-interceptor.mjs",
   "exports": {
-    ".": "./src/stream2object-interceptor.mjs",
-    "./": "./"
+    ".": "./src/stream2object-interceptor.mjs"
   },
   "description": "Splits a stream into lines.",
   "keywords": [
