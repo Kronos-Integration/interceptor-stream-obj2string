@@ -12,10 +12,10 @@
   },
   "description": "Splits a stream into lines.",
   "keywords": [
-    "stream",
+    "kronos-interceptor",
     "line",
     "parser",
-    "kronos-interceptor"
+    "stream"
   ],
   "contributors": [
     {
