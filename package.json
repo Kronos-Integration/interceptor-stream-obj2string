@@ -35,7 +35,7 @@
     "lint": "documentation lint ./src/stream2object-interceptor.mjs"
   },
   "dependencies": {
-    "@kronos-integration/interceptor": "^10.0.1"
+    "@kronos-integration/interceptor": "^10.0.4"
   },
   "devDependencies": {
     "ava": "^3.12.1",
