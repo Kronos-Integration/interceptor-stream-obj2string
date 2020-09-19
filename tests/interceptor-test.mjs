@@ -1,12 +1,8 @@
-import { Stream2ObjectInterceptor } from '../src/stream2object-interceptor';
-import {
-  interceptorTest,
-  mockReadStreamFactory,
-  testResponseHandler
-} from 'kronos-test-interceptor';
-import test from 'ava';
+import { Stream2ObjectInterceptor } from "../src/stream2object-interceptor.mjs";
+import { interceptorTest, testResponseHandler } from "kronos-test-interceptor";
+import test from "ava";
 
-const stream = require('stream');
+const stream = require("stream");
 
 const logger = {
   debug(a) {
@@ -20,7 +16,7 @@ function dummyEndpoint(name) {
       return name;
     },
     get path() {
-      return '/get:id';
+      return "/get:id";
     },
     toString() {
       return this.name;
@@ -47,20 +43,20 @@ class MockWriteStream extends stream.Writable {
 }
 
 test(
-  'basic',
+  "basic",
   interceptorTest,
   Stream2ObjectInterceptor,
-  dummyEndpoint('ep1'),
+  dummyEndpoint("ep1"),
   {},
-  'stream-obj-to-string',
+  "stream-obj-to-string",
   async (t, interceptor, withConfig) => {
     t.deepEqual(interceptor.toJSON(), {
-      type: 'stream-obj-to-string'
+      type: "stream-obj-to-string"
     });
 
     if (!withConfig) return;
 
-    interceptor.connected = dummyEndpoint('ep');
+    interceptor.connected = dummyEndpoint("ep");
     interceptor.connected.receive = testResponseHandler;
 
     /*
