@@ -12,7 +12,7 @@ kronos-interceptor-stream-obj2string
 =====
 Splits a stream into lines.
 
-# API Reference
+# API
 
 * <a name="Obj2String+_transform"></a>
 
