@@ -58,6 +58,9 @@
   },
   "homepage": "https://github.com/Kronos-Integration/interceptor-stream-obj2string#readme",
   "template": {
-    "inheritFrom": "arlac77/template-kronos-component"
+    "inheritFrom": [
+      "arlac77/template-arlac77-github",
+      "arlac77/template-kronos-component"
+    ]
   }
 }
