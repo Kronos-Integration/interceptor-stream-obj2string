@@ -19,19 +19,12 @@ Splits a stream into lines.
 
 ### Table of Contents
 
--   [Stream2ObjectInterceptor](#stream2objectinterceptor)
 -   [Transform](#transform)
 -   [constructor](#constructor)
     -   [Parameters](#parameters)
 -   [\_transform](#_transform)
     -   [Parameters](#parameters-1)
-
-## Stream2ObjectInterceptor
-
-**Extends Interceptor**
-
-This interceptor cares about the handling of the messages.
-It will add the hops and copies the messages
+-   [Stream2ObjectInterceptor](#stream2objectinterceptor)
 
 ## Transform
 
@@ -61,6 +54,13 @@ Reads the stream data and split it into lines.
 -   `data`  
 -   `enc`  
 -   `next`  
+
+## Stream2ObjectInterceptor
+
+**Extends Interceptor**
+
+This interceptor cares about the handling of the messages.
+It will add the hops and copies the messages
 
 # install
 
