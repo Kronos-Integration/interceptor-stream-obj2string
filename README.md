@@ -22,7 +22,7 @@ Splits a stream into lines.
 *   [Transform](#transform)
 *   [constructor](#constructor)
     *   [Parameters](#parameters)
-*   [\_transform](#\_transform)
+*   [\_transform](#_transform)
     *   [Parameters](#parameters-1)
 *   [Stream2ObjectInterceptor](#stream2objectinterceptor)
 
@@ -35,10 +35,10 @@ Transforms an object stream into a stream of strings
 Creates the line parser and sets the options.
 The following options are supported:
 {
-"allow_new_line_in_cell" : true,
-"line_separator" : "\n",
-"quote_char" : '"'
-"skip_empty_lines" : true
+"allow\_new\_line\_in\_cell" : true,
+"line\_separator" : "\n",
+"quote\_char" : '"'
+"skip\_empty\_lines" : true
 }
 
 ### Parameters
@@ -51,9 +51,9 @@ Reads the stream data and split it into lines.
 
 ### Parameters
 
-*   `data`  
-*   `enc`  
-*   `next`  
+*   `data` &#x20;
+*   `enc` &#x20;
+*   `next` &#x20;
 
 ## Stream2ObjectInterceptor
 
