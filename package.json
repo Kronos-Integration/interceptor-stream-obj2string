@@ -42,7 +42,7 @@
     "c8": "^9.1.0",
     "documentation": "^14.0.3",
     "kronos-test-interceptor": "^3.1.1",
-    "semantic-release": "^23.0.7"
+    "semantic-release": "^23.0.8"
   },
   "engines": {
     "node": ">=20.12.1"
