@@ -39,7 +39,7 @@
     "@kronos-integration/interceptor": "^13.1.30"
   },
   "devDependencies": {
-    "ava": "^6.4.1",
+    "ava": "^7.0.0",
     "c8": "^11.0.0",
     "documentation": "^14.0.3",
     "kronos-test-interceptor": "^3.1.1",
